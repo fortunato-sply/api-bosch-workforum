@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const { UserSchema } = require('./User');
+const User = require('./User');
 
 const Post = mongoose.model('Post', {
   title: String,
   text: String,
-  author: UserSchema,
+  author: User.schema,
   likes: Number,
   userLikes: [String]
 })
