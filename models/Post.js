@@ -4,7 +4,10 @@ const User = require('./User');
 const Post = mongoose.model('Post', {
   title: String,
   text: String,
-  author: User.schema,
+  author: {
+    id: String,
+    name: String
+  },
   likes: Number,
   userLikes: [String]
 })
